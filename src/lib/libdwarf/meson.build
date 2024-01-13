@@ -172,6 +172,8 @@ libdwarf = declare_dependency(
   dependencies : [zlib_deps, libzstd_deps]
 )
 
+meson.override_dependency('libdwarf', libdwarf)
+
 install_headers(libdwarf_header_src,
   install_dir : dir_pkginclude + '-' + v_maj
 )
